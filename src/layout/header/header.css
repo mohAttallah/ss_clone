@@ -1,0 +1,197 @@
+        /****************start navbar**********************/
+        .search-box {
+            display: flex;
+            align-items: center;
+            width: 450px;
+            height: 30px;
+            border-radius: 25px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-box input {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            width: 100%;
+            padding: 5px;
+            text-align: center;
+            color: black;
+        }
+
+        .search-box button {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            margin-right: 10px;
+            cursor: pointer;
+            color: black;
+        }
+
+        .header-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+
+        .search-input {
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            border: none;
+            text-align: center;
+            outline: none;
+            border-radius: 25px;
+            font-size: 14px;
+        }
+
+        .logo {
+            display: inline-block;
+            text-decoration: none;
+            background-image: url('../../assets/images/صنايعي.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            padding: 50px 100px;
+        }
+
+        .header-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+
+        :root {
+            --box-width: 100px;
+            --box-height: 30px;
+            --main-color: black;
+            --text-color: white;
+            --explore-offer-margin: 450px;
+        }
+
+        .explore-offer-container {
+            display: flex;
+            font-size: 20px;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .explore-text {
+            margin-bottom: 5px;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .offer-text {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .request-service-container {
+            display: flex;
+            margin-left: 30px;
+            font-size: 20px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .request-text {
+            margin-bottom: 5px;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .service-text {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .logo {
+            margin-right: 10px;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .nav-link {
+            margin-right: 20px;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .flag img {
+            height: 20px;
+            margin-right: 20px;
+        }
+
+        .users {
+            font-size: 20px;
+            margin-left: 20px;
+            color: black;
+            text-align: center;
+            padding: 1px;
+        }
+
+        .notification-icon {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: black;
+            color: #fff;
+        }
+
+        .notification-icon i {
+            font-size: 18px;
+        }
+
+        .home-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: black;
+            color: #fff;
+        }
+
+        .home-icon i {
+            font-size: 18px;
+        }
+
+        .user-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #ccc;
+        }
+
+        .user-name {
+            margin-left: 10px;
+            font-size: 16px;
+        }
+        .login{
+            border-radius: 50px;
+        }
+        /****************end navbar**********************/
