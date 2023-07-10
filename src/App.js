@@ -1,5 +1,3 @@
-'use strict'
-
 import { Route, Routes } from "react-router-dom";
 // import Pages
 import Login from './pages/Login/Login';

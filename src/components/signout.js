@@ -1,4 +1,3 @@
-'use strict'
 function handleLogout() {
     localStorage.removeItem('token');
     return;

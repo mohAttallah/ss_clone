@@ -3,7 +3,7 @@ import "./main.css";
 import SearchContainer from './SearchContainer.js';
 import ServiceCategory from './ServiceCategory.js';
 import ProfessionalCard from './ProfessionalCard';
-import PageHead from './head';
+import PageHead from './Head';
 const MainPage = () => {
     return (
         <React.Fragment>
