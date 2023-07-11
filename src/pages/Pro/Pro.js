@@ -4,7 +4,7 @@ import HeadComponent from './Head';
 
 function Pro() {
     const isLoggedIn = checkTokenInLocalStorage();
-    // if (!isLoggedIn) window.location.href = '/';
+    if (!isLoggedIn) window.location.href = '/';
     return (
         <div>
             <HeadComponent />

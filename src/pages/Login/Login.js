@@ -1,15 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import './Login.css';
 import Head from "./head";
+import Profile from "../../pages/Profile/Profile"
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [isLoggedIn, setIsLoggedIn] = useState(null);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    useEffect(() => {
+        const token = localStorage.getItem('token');
+        if (token) {
+            setIsLoggedIn(true);
+        }
+    }, []);
 
     const handleLogin = async (e) => {
         e.preventDefault();
-
         try {
             const response = await axios.post('http://localhost/sanai3ey/server/CustomerLogin.php', {
                 email: email,
@@ -17,33 +24,26 @@ const Login = () => {
             });
             console.log(response.data.data.Email);
 
-            // Handle the response
             const token = response.data.data.Email;
             setIsLoggedIn(true);
 
             localStorage.setItem('token', token);
 
-            // Reset the form
             setEmail('');
             setPassword('');
         } catch (error) {
-            // Handle error
             console.error(error);
         }
     };
 
     const handleLogout = () => {
-        // Clear session data and set isLoggedIn to false
         setIsLoggedIn(false);
         localStorage.removeItem('token');
     };
 
     const getUsernameFromToken = () => {
-        // Retrieve username from JWT token
         const token = localStorage.getItem('token');
         if (token) {
-            // const decodedToken = jwt.decode(token);
-            // return decodedToken ? decodedToken.username : '';
             return token;
         }
         return '';
@@ -52,11 +52,9 @@ const Login = () => {
     return (
         <div>
             <Head />
+
             {isLoggedIn ? (
-                <div>
-                    <p>Welcome, {getUsernameFromToken()}!</p>
-                    <button onClick={handleLogout}>Logout</button>
-                </div>
+                <Profile/>
             ) : (
                 <div className="container">
                     <div className="login-container">
